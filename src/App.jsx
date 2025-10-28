@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function App() {
   return (
-    <div className="font-sans antialiased text-gray-900">
+    <div className="font-inter antialiased text-gray-900">
       {/* Minimal top nav */}
       <header className="sticky top-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">

@@ -21,8 +21,20 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="w-full bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6 md:px-8">
+    <section id="services" className="relative w-full bg-white py-20 md:py-28">
+      {/* Subtle grid background */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
+          backgroundSize: "48px 48px, 48px 48px",
+          backgroundPosition: "-1px -1px",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-6xl px-6 md:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +64,13 @@ export default function Services() {
                   <p className="mt-2 text-sm leading-relaxed text-gray-600">{s.desc}</p>
                 </div>
               </div>
-              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: "radial-gradient(120px 120px at var(--x,50%) var(--y,50%), rgba(59,130,246,0.08), transparent 60%)" }} />
+              <div
+                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{
+                  background:
+                    "radial-gradient(160px 160px at var(--x,50%) var(--y,50%), rgba(59,130,246,0.09), transparent 60%)",
+                }}
+              />
             </motion.div>
           ))}
         </div>
